@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* General -----------------------------*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, img, small, strong, ol, ul, li, form, label, table, caption, tr, td, footer, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+footer, header, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	text-rendering: optimizeLegibility;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+	font-size: 62.5%;	
+	color: #818b92;
+}
+
+p {
+	font-size: 1.4em;
+	line-height: 1.6em;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+	outline: 0;
+}
+a:focus {
+	outline: 0;
+	text-decoration: none;
+}
+a {
+	outline: 0;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #23313a;
+	font-weight: bold;
+	margin: 0.9em 0;
+}
+
+h2{
+	font-size: 1.8em;
+	color: #23313a;
+	
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	background: none;
+}
+
+.no, hr {
+	display: none !important;
+}
+
+section.generic {
+	padding: 20px 0 0 0;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+
+
+.wrapp{
+	margin: 0 auto;
+	width: 80%;
+}
+
+
+
+/* Main Menu ---------------------------*/
+nav .navbar-inner{
+	background: #1fb4da;
+	border: none;
+	padding: 20px 0;
+}
+
+.navbar .nav > li > a {
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	position: relative;
+	display: inline-block;
+	margin: 0 10px;
+	outline: none;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	padding: 0 15px;
+	height: 45px;
+	line-height: 45px;
+
+}
+.navbar .nav a:hover {
+	color: #fff!important;
+}
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+	background: #1fb4da;
+	box-shadow: none;
+	color: #fff;
+}
+
+
+/* Анимация меню */
+.nav li a::before,
+.nav li a::after {
+	position: absolute;
+	width: 45px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0.2;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	pointer-events: none;
+}
+
+.nav li a::before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.nav li a::after {
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+.nav li a:hover::before,
+.nav li a:hover::after,
+.nav li a:focus::before,
+.nav li a:focus::after {
+	opacity: 1;
+}
+
+.nav li a:hover::before,
+.nav li a:focus::before {
+	left: 50%;
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	-moz-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+}
+
+.nav li a:hover::after,
+.nav li a:focus::after {
+	right: 50%;
+	-webkit-transform: rotate(0deg) translateX(50%);
+	-moz-transform: rotate(0deg) translateX(50%);
+	transform: rotate(0deg) translateX(50%);
+}
+/* Анимация меню end */
+
+
